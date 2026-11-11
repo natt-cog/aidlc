@@ -28,16 +28,18 @@ Devin 専用のハーネスはないため、Devin が読む `AGENTS.md` と `.a
 
 ## Devin での使い方
 
-Devin のチャットで、作りたいものを AI-DLC で進めるよう依頼します。
+Devin のチャットで `@skills:aidlc` を付けて依頼します（`@` を入力して Skills から選べます）。Devin の Web アプリでは、スキルは `/aidlc` ではなく `@skills:<名前>` で呼び出します。
 
 ```text
-AI-DLC で在庫管理の REST API を作って
+@skills:aidlc 在庫管理の REST API を作って
 ```
+
+`@skills:aidlc-express` のように、スコープやステージ別のスキルも同じ形で呼べます。
 
 - Devin が `aidlc` スキルを起動し、計画の提案 → 質問 → 承認ゲートの順に進めます
 - 承認・修正はチャットで返答するだけです
-- 進捗確認: 「AI-DLC の進捗を見せて」（`--status`）
-- 軽量に進める: 「AI-DLC の express で」（`--scope express`）
+- 進捗確認: `@skills:aidlc --status`
+- 軽量に進める: `@skills:aidlc-express 〇〇を作って`
 
 ## セットアップ（新しい環境）
 
