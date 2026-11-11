@@ -63,7 +63,7 @@ Commit the `aidlc/` workspace tree — the record (state, the per-clone audit sh
 ## Running AI-DLC in Devin
 
 - This repo uses the Codex CLI harness because Devin reads `AGENTS.md` and `.agents/skills/`. Codex hooks and `.codex/config.toml` are not loaded by Devin.
-- Before the first engine call in a session, read `.codex/onboarding.md` (the Codex onboarding that Codex would inject) and follow it; `$aidlc` there means the `aidlc` skill.
+- Before the first engine call in a session, read `.codex/onboarding.md` (the Codex onboarding that Codex would inject) and follow it; `$aidlc` there means the `aidlc` skill; users invoke it as `@skills:aidlc <request>` (Devin has no `/aidlc` slash command).
 - The `aidlc` CLI (2.11.3) must be on PATH. If missing: `curl -fsSL https://github.com/awslabs/aidlc-workflows/releases/latest/download/install.sh | sh`.
 - Show AI-DLC questions to the user via `message_user` and wait for the reply; the user writes Japanese, so ask in Japanese.
 - `aidlc doctor` warnings about Codex hook trust and a missing `codex` binary are expected here.

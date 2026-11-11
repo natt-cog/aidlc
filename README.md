@@ -28,16 +28,20 @@ Devin 専用のハーネスはないため、Devin が読む `AGENTS.md` と `.a
 
 ## Devin での使い方
 
-Devin のチャットで、作りたいものを AI-DLC で進めるよう依頼します。
+Devin のチャットで `@skills:aidlc` を付けて依頼します。Devin の Web アプリでは、スキルは `/aidlc` ではなく `@skills:<名前>` で呼び出します。
+
+リポジトリのスキルはセッションでこのリポジトリを clone したときに読み込まれるため、新しいセッションの `@` 候補一覧には出ません。一覧に出したい場合は、Customize → Plugins → From repository で `natt-cog/aidlc`、サブディレクトリ `.agents` を指定してプラグインとしてインストールします（`.agents/skills/<名前>/SKILL.md` がスキルのみのプラグインとして読み込まれます）。
 
 ```text
-AI-DLC で在庫管理の REST API を作って
+@skills:aidlc 在庫管理の REST API を作って
 ```
+
+`@skills:aidlc-express` のように、スコープやステージ別のスキルも同じ形で呼べます。
 
 - Devin が `aidlc` スキルを起動し、計画の提案 → 質問 → 承認ゲートの順に進めます
 - 承認・修正はチャットで返答するだけです
-- 進捗確認: 「AI-DLC の進捗を見せて」（`--status`）
-- 軽量に進める: 「AI-DLC の express で」（`--scope express`）
+- 進捗確認: `@skills:aidlc --status`
+- 軽量に進める: `@skills:aidlc-express 〇〇を作って`
 
 ## セットアップ（新しい環境）
 
