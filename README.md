@@ -28,7 +28,9 @@ Devin 専用のハーネスはないため、Devin が読む `AGENTS.md` と `.a
 
 ## Devin での使い方
 
-Devin のチャットで `@skills:aidlc` を付けて依頼します（`@` を入力して Skills から選べます）。Devin の Web アプリでは、スキルは `/aidlc` ではなく `@skills:<名前>` で呼び出します。
+Devin のチャットで `@skills:aidlc` を付けて依頼します。Devin の Web アプリでは、スキルは `/aidlc` ではなく `@skills:<名前>` で呼び出します。
+
+リポジトリのスキルはセッションでこのリポジトリを clone したときに読み込まれるため、新しいセッションの `@` 候補一覧には出ません。一覧に出したい場合は、Customize → Plugins → From repository で `natt-cog/aidlc`、サブディレクトリ `.agents` を指定してプラグインとしてインストールします（`.agents/skills/<名前>/SKILL.md` がスキルのみのプラグインとして読み込まれます）。
 
 ```text
 @skills:aidlc 在庫管理の REST API を作って
