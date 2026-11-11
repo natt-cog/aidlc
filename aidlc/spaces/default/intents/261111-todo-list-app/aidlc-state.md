@@ -62,7 +62,7 @@
 - [x] state-init — EXECUTE
 
 ### IDEATION PHASE
-- [-] intent-capture — EXECUTE
+- [?] intent-capture — EXECUTE
 - [ ] market-research — SKIP
 - [ ] feasibility — EXECUTE
 - [ ] scope-definition — EXECUTE
@@ -104,7 +104,7 @@
 - **Current Stage**: intent-capture
 - **Next Stage**: feasibility
 - **Status**: Running
-- **Last Updated**: 2026-11-11T12:22:21Z
+- **Last Updated**: 2026-11-11T13:06:41Z
 
 ## Session Resume Point
 - **Last Completed Stage**: state-init
